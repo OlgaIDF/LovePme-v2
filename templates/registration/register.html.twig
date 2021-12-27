@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+
+<!--  Inscription investisseurs -->
+<section id="inscription" class="bg-light">
+
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-md-8 mx-auto text-center">
+				<h5 class="mb-3">Inscription investisseurs</h5>
+				<h1 class="text-uppercase text-center">Inscription investisseurs</h1>
+				<h6 class="text-muted text-center mt-3 ">&#42;
+					Cette inscription est obligatoire conformément à la législation du crowdfunding (gratuite et sans
+					engagement)
+					Vos données sont protégées et sécurisées.
+					Veuillez noter que tous les champs sont obligatoires et qu'une demande incomplète pourrait être
+					rejetée</h6>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 mx-auto">
+				<!--  Legal_personality -->
+				<form id="legal_personality">
+
+					<p> Vous êtes :</p>
+					<label><input type="radio" name="lp" value="personne physique">&nbsp;Personne physique</label><br>
+					<label><input type="radio" name="lp" value="personne morale">&nbsp;Personne morale</label>
+				</form><!--  /Legal_personality -->
+
+				<!-- Question - personne_morale -->
+				<div class="personne_morale ">
+					<form id="questionPersonneMorale" name="questionPersonneMorale">
+
+						<p>Vos capitaux propres sont-ils supérieurs à 100 000 EUR?</p>
+						<label><input type="radio" name="questionPersonneMorale1" value="Oui">&nbsp;Oui</label><br>
+						<label><input type="radio" name="questionPersonneMorale1" value="Non">&nbsp;Non</label><br>
+						<p>Votre chiffre d’affaires net d’au moins 2 000 000 EUR</p>
+						<label><input type="radio" name="questionPersonneMorale2" value="Oui">&nbsp;Oui</label><br>
+						<label><input type="radio" name="questionPersonneMorale2" value="Non">&nbsp;Non</label><br>
+						<p>Votre total du bilan est t-il d’au moins 1 000 000 EUR</p>
+						<label><input type="radio" name="questionPersonneMorale3" value="Oui">&nbsp;Oui</label><br>
+						<label><input type="radio" name="questionPersonneMorale3" value="Non">&nbsp;Non</label><br>
+					</form>
+
+				</div><!-- /Question - personne_morale -->
+				<!-- Modal -->
+				{{ include('registration/modal.html.twig')}}
+				<!-- /Modal -->
+				<!-- Question - personne_physique -->
+				<div class="personne_physique mt-5">
+					<form id="questionPersonnePhysique" name="questionPersonnePhysique">
+						<p>Votre revenu personnel brut est-il supérieur à 60 000 EUR annuel ou disposez-vous d’un
+							portefeuille d’instruments
+							financiers dont la valeur dépasse 100 000 EUR ?</p>
+						<label><input type="radio" name="questionPersonnePhysique1" value="Oui">&nbsp;Oui</label><br>
+						<label><input type="radio" name="questionPersonnePhysique1" value="Non">&nbsp;Non</label><br>
+
+						<p>Avez-vous exercé pendant plus d’une an une activité dans une entreprise du secteur financier
+							ou
+							des fonctions de cadre
+							supérieur dans une entreprise dont le chiffre d’affaires net est supérieur à 2 000 000 EUR ?
+						</p>
+						<label><input type="radio" name="questionPersonnePhysique2" value="Oui">&nbsp;Oui</label><br>
+						<label><input type="radio" name="questionPersonnePhysique2" value="Non">&nbsp;Non</label><br>
+
+						<p>Avez-vous en moyenne effectué plus de dix transactions d’une taille significative par
+							trimestre
+							au cours des quatre
+							trimestres précédents sur les marchés de capitaux ?</p>
+						<label><input type="radio" name="questionPersonnePhysique3" value="Oui">&nbsp;Oui</label><br>
+						<label><input type="radio" name="questionPersonnePhysique3" value="Non">&nbsp;Non</label><br>
+
+					</form>
+
+				</div><!-- /Question - personne_physique -->
+				<!-- Registration Form -->
+				<div class="">
+					{{ include('registration/registrationForm.html.twig')}}
+				</div>
+
+
+				
+
+			</div>
+		</div>
+
+	</div>
+
+</section>
+<!--  //Inscription investisseurs -->
+{{ include('footer.html.twig')}}
+<script src="js/inscription.js">
+
+
+</script>
+{% endblock %}

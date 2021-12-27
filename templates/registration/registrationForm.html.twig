@@ -1,0 +1,50 @@
+<div class="registrationForm">
+    <h4 class="text-center">Données personnelles</h4>
+    {{ form_start(registrationForm) }}
+
+    {{ form_row(registrationForm.last_name, {'label': 'Nom', 'attr': {'placeholder': 'Nom d\'utilisateur' }}) }}
+    {{ form_row(registrationForm.first_name, {'label': 'Prenom', 'attr': {'placeholder': 'Prenom d\'utilisateur' }})
+    }}
+    {{ form_row(registrationForm.date_of_birth, {'label': 'Date de naissance', 'attr':  {'placeholder': 'Date de naissance' }})
+    }}
+    {{ form_row(registrationForm.email, {'label': 'E-mail', 'attr':  {'placeholder': 'Adresse e-mail' }}) }}
+   
+    {{ form_row(registrationForm.legal_personality, {'label':"Vous êtes : "}) }}
+
+    <div style="display: none">
+        {{ form_row(registrationForm.roles) }}
+    </div>
+
+    {{ form_row(registrationForm.plainPassword, {'label': 'Mot de passe', 'attr': {'placeholder': 'Mot de passe' }})
+
+    }}
+
+    {# <div class="protection d-flex mt-5 pt-5">
+        <div class="fontawesome me-5">
+            <i class="fas fa-exclamation"></i>
+        </div>
+        <div>
+            <h5>Il est rappelé que l’investissement dans des sociétés non cotées comporte des risques spécifiques :
+            </h5>
+            <ul class="my-5">
+                <li>risque de perte totale ou partielle du capital investi;</li>
+                <li>risque d’illiquilité : la revente des titres n’est pas garantie, elle peut être incertaine voire
+                    impossible malgré l'existence d'un 							d'une Fiche d’informations clés sur l’investissement
+et banque d'informations
+;</li>
+                <li>
+                    le retour sur investissement dépend de la réussite de l'entreprise financée.</li>
+            </ul>
+        </div>
+    </div> #}
+
+    {{ form_row(registrationForm.agreeTerms1, {'label':"Avez-vous conscience que vous pouvez perdre éventuellement la totalité de votre investissement ?" })}}
+    {{ form_row(registrationForm.agreeTerms2, {'label':"Avez-vous conscience que vous aurez des difficultés à revendre vos titres malgré l'existence d'une Fiche d’informations clés sur l’investissement
+et banque d'informations
+ ?" })}}
+    {{ form_row(registrationForm.agreeTerms3, {'label':" J’ai pris connaissance des CGU" })}}
+    <button type="submit" id="form-submit" class="btn registrationForm"></button>
+
+
+    {{ form_end(registrationForm) }}
+</div>
