@@ -258,8 +258,9 @@ section {
    margin-bottom: 2rem;
 }
 
-.personne_morale, .personne_physique, .registrationForm {
-   display: none;
+.personne_morale, .personne_physique, .registrationForm, 
+.non-averti1, .non-averti2, .communes  {
+   display: none ;
 
 }
 

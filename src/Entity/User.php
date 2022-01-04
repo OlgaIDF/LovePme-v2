@@ -52,12 +52,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $date_of_birth;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $legal_personality;
-
- 
+   
 
     public function getId(): ?int
     {
@@ -184,16 +179,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getLegalPersonality(): ?int
-    {
-        return $this->legal_personality;
-    }
-
-    public function setLegalPersonality(int $legal_personality): self
-    {
-        $this->legal_personality = $legal_personality;
-
-        return $this;
-    }
 
 }

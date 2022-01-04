@@ -37,7 +37,7 @@ security:
     access_control:
        - { path: ^/admin, roles: ROLE_ADMIN }
      
-       - { path: ^/userssymfony serve, roles: ROLE_USER }
+       - { path: ^/users, roles: ROLE_USER }
 
     role_hierarchy:
          ROLE_ADMIN: ROLE_USER

@@ -22,17 +22,7 @@ class EditProfileType extends AbstractType
             ->add('last_name', TextType::class)
             ->add('date_of_birth', BirthdayType::class)
             ->add('email', EmailType::class)
-            ->add('legal_personality', ChoiceType::class, [
-
-
-                'choices' => [
-                    'personne physique' => 1,
-                    'personne morale' => 2,
-
-                ],
-                'expanded' => true,
-
-            ])
+           
             ->add('Valider', SubmitType::class);
     }
 
